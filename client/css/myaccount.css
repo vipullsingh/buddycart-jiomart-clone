@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+#myaccount-div{
+    /* outline: 1px solid blue; */
+    width: 80%;
+    margin: auto;
+}
+#myaccount-div>h1{
+    padding: 20px 0px;
+    font-weight: 900;
+    font-size: x-large;
+}
+#grid_section{
+    /* outline: 1px solid blue; */
+    display: grid;
+    grid-template-columns: 30% 60% ;
+    gap: 5%;
+}
+
+#left{
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 20px;
+}
+#left>div{
+    /* outline: 1px solid blue; */
+    border-bottom: 1px solid darkgray;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    
+}
+#left>div:not(:nth-child(1)) *{
+    margin-right: 20px;
+}
+#left>div:not(:nth-child(1)) img{
+    width: 20px;
+}
+#profile{
+    /* outline: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#profile img{
+    width: 70px;
+}
+#profile>div{
+    display: block;
+    /* outline: 1px solid blue; */
+    margin: 2px;
+}
+#profile>div>button{
+    
+    width: 20px;
+    /* height: 40px; */
+    /* border-radius: 50%; */
+    border: none;
+    color: #0078ad;
+    background-color: white;
+    font-size: x-large;
+    cursor:pointer;
+    font-weight: 900;
+}
+#right{
+    /* outline: 1px solid red; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    row-gap: 20px;
+}
+#address-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    /* outline: 1px solid red; */
+}
+#address-card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 20px; 
+    padding: 20px;
+}
+#address-card p{
+    font-size: small;
+}
+
+
+#add-new-address{
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+    border: 2px solid gray;
+    background-color: #0078ad;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+#add-new-address:hover{
+    background-color: #034e6e;
+}
+
+#addr{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    row-gap: 10px;
+
+}
+#addr input{
+    height: 30px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#CRP>div:nth-child(1) button{
+  background-color: #e6f7ef;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid darkgrey;
+  font-weight: 700;
+  font-size: large;
+  color: black;
+}
+#CRP>div:nth-child(3) button{
+  background-color: #00b85a;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+}
+#right{
+  /* outline: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  
+}
+#grid-section{
+  grid-template-columns: repeat(1,1fr);
+}
+
+#payment-details1{
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 20px;
+  border-radius: 20px;
+  align-items: center;
+  row-gap: 20px;
+}
+
+
+#payment-details1>div{
+  width: 45%;
+  /* outline: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.owner, .card-number{
+  display: block;
+  width: 60%;
+}
+.owner input,.card-number input {
+  width: 90%;
+}
+.cvv{
+  display: block;
+  width: 40%;
+}
+.cvv input{
+  width: 90%;
+}
+#right>div:nth-child(3){
+  /* outline: 1px solid red; */
+  display: flex;
+  justify-content: center;
+}
+#place-order-Btn{
+  display: block;
+  width: 20%;
+}
+
+input,select{
+  /* outline: 1px solid red; */
+  height: 30px;
+  border: 2px solid darkgray;
+}
+
+
+
+
+
+
+

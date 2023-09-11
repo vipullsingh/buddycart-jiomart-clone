@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <title>BuddyCart</title>
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googlea  pis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="../admin/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="./css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./cssborder.css">
+  <style>
+       
+
+    .Input {
+        font-size: 20px;
+       
+       
+    }
+
+    
+    .flex {
+        width: 20%;
+        display: flex;
+      
+
+    }
+    #imgsize {
+        width: 50px;
+        height: 50px;
+    }
+ 
+ 
+.data-div{
+text-align: center;
+}
+  /* Card Container */
+  #cardContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+.card{
+    box-sizing: border-box;
+    padding: 10px;
+    height: 460px;
+    width: 300px;
+    border: 1px solid rgb(199, 199, 199);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    border-radius: 20px;
+    cursor: pointer;
+}
+.card>img{
+    align-self: center;
+    border-radius: inherit;
+    width: 90%;
+}
+.card>p{
+    color: grey;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}
+.card>button{
+    height: 35px;
+    align-self: center;
+    width: 90%;
+    background-color: #fff;
+    border:4px solid rgb(199, 199, 199);
+    border-radius: 15px;
+    font-weight: bolder;
+    color: red;
+}
+.card>button:hover{
+    border: 1px solid #0C5273;
+    animation: fade 2s linear;
+    cursor: pointer;
+}
+.stPrice{
+    margin: 0 10px 0 0;
+    color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stPrice>h3{
+    display: inline-block;
+    margin-left: 10px;
+    color: black;
+}
+.stPrice>p:nth-child(1){
+    text-decoration: line-through;
+}
+.stPrice>p:nth-child(3){
+    text-decoration: none;
+    line-height: 1em;
+    padding: 5px;
+    display: inline-block;
+    margin-left: 50px;
+    background-color: #e5f7ee;
+    color: #4c753c;
+    font-size: smaller;
+}
+.pagination-button{
+  margin: 30px 0px 30px 0px ;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+ 
+  background-color: #0C5273;
+}
+
+
+
+    #columnchart_material{
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-xxl position-relative bg-white d-flex p-0">
+    <!-- Spinner Start -->
+    <div id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Sidebar Start -->
+    <div class="sidebar pe-4 pb-3">
+        <nav class="navbar bg-light navbar-light">
+          <a href="./Dashboard.html" class="navbar-brand mx-4 mb-3">
+            <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>BuddyCart</h3>
+          </a>
+          <div class="d-flex align-items-center ms-4 mb-4">
+            <div class="position-relative">
+              <img class="rounded-circle"
+                src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="" style="width: 50px; height:50px; height: 40px;">
+              <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+              </div>
+            </div>
+            <div class="ms-3">
+              <h6 class="mb-0">Adesh</h6>
+              <span>Admin</span>
+            </div>
+          </div>
+          <div class="navbar-nav w-100">
+            <a href="./Dashboard.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+            <a href="./Addproductpage.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Add Products</a>
+            <a href="./coustmerpage.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Registered
+              Users</a>
+            <a href="./DeleteProducts.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Delete Products</a>
+            <a href="./TotalSales.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Product Sale</a>
+            <a href="./orders.HTML" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Orders</a>
+  
+          </div>
+        </nav>
+      </div>
+    <!-- Sidebar End -->
+
+
+    <!-- Content Start -->
+    <div class="content">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+        <a href="#" class="sidebar-toggler flex-shrink-0">
+          <i class="fa fa-bars"></i>
+        </a>
+        <form class="d-none d-md-flex ms-4">
+          <input class="form-control border-0" type="search" placeholder="Search">
+        </form>
+        <div class="navbar-nav align-items-center ms-auto">
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <i class="fa fa-envelope me-lg-2"></i>
+              <span class="d-none d-lg-inline-flex">Message</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <small>15 minutes ago</small>
+                  </div>
+                </div>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <small>15 minutes ago</small>
+                  </div>
+                </div>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <small>15 minutes ago</small>
+                  </div>
+                </div>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item text-center">See all message</a>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <i class="fa fa-bell me-lg-2"></i>
+              <span class="d-none d-lg-inline-flex">Notification</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+              <a href="#" class="dropdown-item">
+                <h6 class="fw-normal mb-0">Profile updated</h6>
+                <small>15 minutes ago</small>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item">
+                <h6 class="fw-normal mb-0">New user added</h6>
+                <small>15 minutes ago</small>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item">
+                <h6 class="fw-normal mb-0">Password changed</h6>
+                <small>15 minutes ago</small>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item text-center">See all notifications</a>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <span class="d-none d-lg-inline-flex">Adesh</span>
+            </a>
+          
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+    
+
+      <!-- Sale & Revenue Start -->
+      <div class="data-div">
+        <div class="right">
+            <div class="top">
+                <h1 class="headline">Delete products from here</h1>
+                <h3 id="showing"></h3>
+                <select name="sort" id="sort">
+                    <option value="">All Products</option>
+                    <option value="desc">High to Low</option>
+                    <option value="asc">Low to High</option>
+                </select>
+            </div>
+
+            <div id="cardContainer">
+               <!-- Append here  -->
+            </div>
+            <div class="pagination-wrapper" id="pagination-wrapper"></div>
+        </div>
+        </div>
+      <!-- Sale & Revenue End -->
+
+
+      <!-- Sales Chart Start -->
+    
+      </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   
+
+
+    <!-- Template Javascript -->
+    <script src="./lib/main.js"></script>
+</body>
+<script src="../admin/css/Delete.js"></script>
+  
+
+</html>

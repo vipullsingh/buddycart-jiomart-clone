@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Landing Page</title>
+<link rel="stylesheet" href="./cssforsidebar.css">
+<link rel="stylesheet" href="./cssborder.css">
+    <style>
+       
+.rightsection {
+    width: 78%;
+    text-align: start;
+  margin: 0px 20px 0px 20px ;
+  margin-left: 336px;
+  
+}
+
+        .rightsection>nav {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 10px 0px 10px ;
+        }
+
+        .Input {
+            font-size: 20px;
+           
+           
+        }
+
+        
+        .flex {
+            width: 20%;
+            display: flex;
+          
+    
+        }
+        #imgsize {
+            width: 50px;
+            height: 50px;
+        }
+     #form{
+       
+       display: flex;
+        align-items: center;
+     }
+     table{
+        width: 100%;
+        text-align: center;
+     }
+     table, th, td {
+     border: inset;
+      }
+   .tdbutton{
+    color: red;
+   }
+   .data-div{
+    text-align: center;
+   }
+   .ProductAddingdiv>form{
+   display: grid;
+   grid-template-columns: repeat(1,1fr);
+ 
+   }
+   .ProductAddingdiv input{
+    font-size: 20px;
+    padding: 10px 0px 10px 0px ;
+   }
+    </style>
+</head>
+
+<body>
+    <div class="conatinerdiv">
+        <a href="./adminlandingpage.html"></a>
+        <div class="leftsection">
+            <a href=""><img id="bgcolor" src="../graphics/logo.png" alt=""></a>
+            <button><a href="./orders.HTML">Orders</a></button>
+            <button><a href="./Addproductpage.html">Add product</a></button>
+            <button><a href="./DeleteProducts.html">Delete product</a></button>
+            <button><a href="./TotalSales.html">Total Sales</a></button>
+            <button><a href="./coustmerpage.html">Registered User</a></button>
+        </div>
+        
+        <div class="rightsection">
+            <nav>
+                <div id="form">
+                    <form action="">
+                        <input type="search" name="" class="Input" id="Search" placeholder="Search...">
+                        <button class="Input" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="flex">
+                    <img id="imgsize" src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png?w=740&t=st=1674023400~exp=1674024000~hmac=df37923f1151945fc3de5188d8d92e9e5abb8a59954ecba91149e876db8234f4 " alt="">
+                    <h3>Admin</h3>
+                    <hr>
+                    <h3>Adesh</h3>
+                </div>
+
+            </nav>
+            <div class="data-div">
+          <div class="ProductAddingdiv">
+            <form action="">
+            name:-<input type="text" placeholder="name">
+            <br>
+            Image:- <input type="text" placeholder="Image">
+            <br>
+            strikeprice:- <input type="number" name="" id="" placeholder="strikeprice">
+            <br>
+             price:- <input type="number" name="" id="" placeholder="price" >
+             <br>
+            stock:- <input type="text" name="" id="" placeholder="stock">
+            <br>
+            category:- <input type="text" name="" id="" placeholder="category">
+            <br>
+            <input type="submit" value="Add-Product">
+            </form>
+          </div>
+        </div>
+    </div>
+
+
+
+    
+
+</body>
+
+</html>

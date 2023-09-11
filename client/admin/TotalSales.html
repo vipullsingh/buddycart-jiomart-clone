@@ -1,0 +1,781 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Landing Page</title>
+    <link rel="stylesheet" href="./cssforsidebar.css">
+
+    <style>
+        rightsection {
+            width: 78%;
+            text-align: start;
+            margin: 0px 20px 0px 20px;
+            margin-left: 336px;
+        }
+
+
+        .rightsection>nav {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 10px 0px 10px;
+        }
+
+        .Input {
+            font-size: 20px;
+
+
+        }
+
+
+        .flex {
+            width: 20%;
+            display: flex;
+
+
+        }
+
+        #imgsize {
+            width: 50px;
+            height: 50px;
+        }
+
+        #form {
+
+            display: flex;
+            align-items: center;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: inset;
+        }
+
+        .tdbutton {
+            color: red;
+        }
+
+        .data-div {
+            text-align: center;
+        }
+
+        .datastatictisof-finance {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        #product-info{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 30px;
+         
+        }
+        #product-info>div{
+             
+            border: 2px solid red;
+            background-image:url("https://www.shutterstock.com/image-vector/blue-seo-line-tile-pattern-600w-529434181.jpg")
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conatinerdiv">
+        <div class="leftsection">
+            <a href=""><img id="bgcolor" src="../graphics/logo.png" alt=""></a>
+            <button><a href="./orders.HTML">Orders</a></button>
+            <button><a href="./Addproductpage.html">Add product</a></button>
+            <button><a href="./DeleteProducts.html">Delete product</a></button>
+            <button><a href="./TotalSales.html">Total Sales</a></button>
+            <button><a href="./coustmerpage.html">Registered User</a></button>
+
+        </div>
+     
+        <div class="rightsection">
+            <nav>
+                <div id="form">
+                    <form action="">
+                        <input type="search" name="" class="Input" id="Search" placeholder="Search...">
+                        <button class="Input" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="flex">
+                    <img id="imgsize"
+                        src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png?w=740&t=st=1674023400~exp=1674024000~hmac=df37923f1151945fc3de5188d8d92e9e5abb8a59954ecba91149e876db8234f4 "
+                        alt="">
+                    <h3>Admin</h3>
+                    <hr>
+                    <h3>Adesh</h3>
+                </div>
+            </nav>
+            <div class="datastatictisof-finance">
+                <table class="columns">
+                    <tr>
+                        <td>
+                            <div id="Sarah_chart_div" style="border: 1px solid #ccc"></div>
+
+                        <td>
+                            <div id="Anthony_chart_div" style="border: 1px solid #ccc"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="Anthony_chart_div1" style="border: 1px solid #ccc"></div>
+                        </td>
+
+                        <td>
+                            <div id="Anthony_chart_div3" style="border: 1px solid #ccc"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="Anthony_chart_div4" style="border: 1px solid #ccc"></div>
+                        </td>
+                    </tr>
+
+                </table>
+                <div id="product-info">
+                    <div class="Total-product-Sale">
+                        <h1>Total-product-Sale:-₹100000</h1>
+                    </div>
+                    <div class="profit-margin-on-every-product">
+                        <h1>profit-margin-on-every-product:-50%</h1>
+                    </div>
+                    <div class="Gross-profit-monthly">
+                        <h1>Gross-profit-monthly:-₹50000</h1>
+
+                    </div>
+
+                    <div class="Employee-cost-reduction">
+                        <h1>Employee-cost-reduction:-10%</h1>
+                    </div>
+
+                    <div class="Final-profit">
+                        <h1>Final-profit:-₹45000</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+
+
+</body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+    // Load Charts and the corechart package.
+    google.charts.load('current', { 'packages': ['corechart'] });
+
+    // Draw the pie chart for Sarah's pizza when Charts is loaded.
+    google.charts.setOnLoadCallback(drawSarahChart);
+
+    // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+    google.charts.setOnLoadCallback(quater1AnthonyChart1);
+
+    google.charts.setOnLoadCallback(quater2nthonyChart);
+
+    google.charts.setOnLoadCallback(quater3nthonyChart);
+    google.charts.setOnLoadCallback(quater4nthonyChart);
+    // Callback that draws the pie chart for Sarah's pizza.
+    function drawSarahChart() {
+
+        // Create the data table for Sarah's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+            ['Quater-1 Profit', 1],
+            ['Quater-2 Profit', 1],
+            ['Quater-3 Profit', 2],
+            ['Quater-4 Profit', 2],
+
+        ]);
+
+        // Set options for Sarah's pie chart.
+        var options = {
+            title: 'Yearly Profit',
+            width: 400,
+            height: 300
+        };
+
+        // Instantiate and draw the chart for Sarah's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Sarah_chart_div'));
+        chart.draw(data, options);
+    }
+
+    // Callback that draws the pie chart for Anthony's pizza.
+    function quater1AnthonyChart1() {
+
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+
+            ['January', 2],
+            ['february', 2],
+            ['March', 2],
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {
+            title: 'Quaterly-1  Profit ',
+            width: 400,
+            height: 300
+        };
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div'));
+        chart.draw(data, options);
+    }
+    function quater2nthonyChart() {
+
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+
+            ['April', 2],
+            ['May', 2],
+            ['June', 2],
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {
+            title: 'Quaterl-2  Profit ',
+            width: 400,
+            height: 300
+        };
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div1'));
+        chart.draw(data, options);
+    }
+
+
+    function quater3nthonyChart() {
+
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+
+            ['July', 4],
+            ['August', 1],
+            ['September', 1],
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {
+            title: 'Quaterly-3  Profit ',
+            width: 400,
+            height: 300
+        };
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div3'));
+        chart.draw(data, options);
+    }
+
+
+    function quater4nthonyChart() {
+
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+
+            ['October', 4],
+            ['November', 1],
+            ['December', 1],
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {
+            title: 'Quaterly-3  Profit ',
+            width: 400,
+            height: 300
+        };
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div4'));
+        chart.draw(data, options);
+    }
+</script>
+
+</html>
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <title>BuddyCart</title>
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googlea  pis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="../admin/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="./css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./cssborder.css">
+
+
+  <style>
+    #columnchart_material{
+      margin-left: 20px;
+    }
+    .Input {
+        font-size: 20px;
+    }
+
+    .flex {
+        width: 20%;
+        display: flex;
+    }
+
+    #imgsize {
+        width: 50px;
+        height: 50px;
+    }
+
+    #form {
+
+        display: flex;
+        align-items: center;
+    }
+
+  
+
+    .data-div {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .datastatictisof-finance {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    #product-info{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+     
+    }
+    #product-info>div{
+         
+        border: 2px solid red;
+        background-image:url("https://www.shutterstock.com/image-vector/blue-seo-line-tile-pattern-600w-529434181.jpg")
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-xxl position-relative bg-white d-flex p-0">
+    <!-- Spinner Start -->
+    <div id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Sidebar Start -->
+    <div class="sidebar pe-4 pb-3">
+      <nav class="navbar bg-light navbar-light">
+        <a href="./Dashboard.html" class="navbar-brand mx-4 mb-3">
+          <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>BuddyCart</h3>
+        </a>
+        <div class="d-flex align-items-center ms-4 mb-4">
+          <div class="position-relative">
+            <img class="rounded-circle"
+              src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="" style="width: 50px; height:50px; height: 40px;">
+            <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+            </div>
+          </div>
+          <div class="ms-3">
+            <h6 class="mb-0">Adesh</h6>
+            <span>Admin</span>
+          </div>
+        </div>
+        <div class="navbar-nav w-100">
+          <a href="./Dashboard.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+          <a href="./Addproductpage.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Add Products</a>
+          <a href="./coustmerpage.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Registered
+            Users</a>
+          <a href="./DeleteProducts.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Delete Products</a>
+          <a href="./TotalSales.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Product Sale</a>
+          <a href="./orders.HTML" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Orders</a>
+
+        </div>
+      </nav>
+    </div>
+    <!-- Sidebar End -->
+
+
+    <!-- Content Start -->
+    <div class="content">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+        <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+          <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+        </a>
+        <a href="#" class="sidebar-toggler flex-shrink-0">
+          <i class="fa fa-bars"></i>
+        </a>
+        <form class="d-none d-md-flex ms-4">
+          <input class="form-control border-0" type="search" placeholder="Search">
+        </form>
+        <div class="navbar-nav align-items-center ms-auto">
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <i class="fa fa-envelope me-lg-2"></i>
+              <span class="d-none d-lg-inline-flex">Message</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <small>15 minutes ago</small>
+                  </div>
+                </div>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <small>15 minutes ago</small>
+                  </div>
+                </div>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <small>15 minutes ago</small>
+                  </div>
+                </div>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item text-center">See all message</a>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <i class="fa fa-bell me-lg-2"></i>
+              <span class="d-none d-lg-inline-flex">Notificatin</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+              <a href="#" class="dropdown-item">
+                <h6 class="fw-normal mb-0">Profile updated</h6>
+                <small>15 minutes ago</small>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item">
+                <h6 class="fw-normal mb-0">New user added</h6>
+                <small>15 minutes ago</small>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item">
+                <h6 class="fw-normal mb-0">Password changed</h6>
+                <small>15 minutes ago</small>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item text-center">See all notifications</a>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+             
+              <span class="d-none d-lg-inline-flex">Adesh</span>
+            </a>
+          
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+
+      <!-- Sale & Revenue Start -->
+      <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+         <h1>Yearly</h1>
+          <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+              <i class="fa fa-chart-line fa-3x text-primary"></i>
+              <div class="ms-3">
+                <p class="mb-2">Profit Margin</p>
+                <h6 class="mb-0">20%</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+              <i class="fa fa-chart-bar fa-3x text-primary"></i>
+              <div class="ms-3">
+                <p class="mb-2">Total Sale</p>
+                <h6 class="mb-0">2656 products</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+              <i class="fa fa-chart-area fa-3x text-primary"></i>
+              <div class="ms-3">
+                <p class="mb-2">Today Revenue in</p>
+                <h6 class="mb-0">₹20L</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+              <i class="fa fa-chart-pie fa-3x text-primary"></i>
+              <div class="ms-3">
+                <p class="mb-2">Total Registered Users</p>
+                <h6 class="mb-0">1M</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sale & Revenue End -->
+
+
+      <!-- Sales Chart Start -->
+     
+
+      <div class="data-div">
+        <div class="datastatictisof-finance">
+            <table class="columns">
+                <tr>
+                    <td>
+                        <div id="Sarah_chart_div" style="border: 1px solid #ccc"></div>
+
+                    <td>
+                        <div id="Anthony_chart_div" style="border: 1px solid #ccc"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="Anthony_chart_div1" style="border: 1px solid #ccc"></div>
+                    </td>
+
+                    <td>
+                        <div id="Anthony_chart_div3" style="border: 1px solid #ccc"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="Anthony_chart_div4" style="border: 1px solid #ccc"></div>
+                    </td>
+                </tr>
+
+            </table>
+           
+        
+     </div>
+     </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   
+
+
+    <!-- Template Javascript -->
+    <script src="./lib/main.js"></script>
+</body>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+    // Load Charts and the corechart package.
+    google.charts.load('current', { 'packages': ['corechart'] });
+
+    // Draw the pie chart for Sarah's pizza when Charts is loaded.
+    google.charts.setOnLoadCallback(drawSarahChart);
+
+    // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+    google.charts.setOnLoadCallback(quater1AnthonyChart1);
+
+    google.charts.setOnLoadCallback(quater2nthonyChart);
+
+    google.charts.setOnLoadCallback(quater3nthonyChart);
+    google.charts.setOnLoadCallback(quater4nthonyChart);
+    // Callback that draws the pie chart for Sarah's pizza.
+    function drawSarahChart() {
+
+        // Create the data table for Sarah's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+            ['Quater-1 Profit', 1],
+            ['Quater-2 Profit', 1],
+            ['Quater-3 Profit', 2],
+            ['Quater-4 Profit', 2],
+
+        ]);
+
+        // Set options for Sarah's pie chart.
+        var options = {
+            title: 'Yearly Profit',
+            width: 400,
+            height: 300
+        };
+
+        // Instantiate and draw the chart for Sarah's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Sarah_chart_div'));
+        chart.draw(data, options);
+    }
+
+    // Callback that draws the pie chart for Anthony's pizza.
+    function quater1AnthonyChart1() {
+
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+
+            ['January', 2],
+            ['february', 2],
+            ['March', 2],
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {
+            title: 'Quaterly-1  Profit ',
+            width: 400,
+            height: 300
+        };
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div'));
+        chart.draw(data, options);
+    }
+    function quater2nthonyChart() {
+
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+
+            ['April', 2],
+            ['May', 2],
+            ['June', 2],
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {
+            title: 'Quaterl-2  Profit ',
+            width: 400,
+            height: 300
+        };
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div1'));
+        chart.draw(data, options);
+    }
+
+
+    function quater3nthonyChart() {
+
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+
+            ['July', 4],
+            ['August', 1],
+            ['September', 1],
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {
+            title: 'Quaterly-3  Profit ',
+            width: 400,
+            height: 300
+        };
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div3'));
+        chart.draw(data, options);
+    }
+
+
+    function quater4nthonyChart() {
+
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+
+            ['October', 4],
+            ['November', 1],
+            ['December', 1],
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {
+            title: 'Quaterly-3  Profit ',
+            width: 400,
+            height: 300
+        };
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div4'));
+        chart.draw(data, options);
+    }
+</script>
+
+  
+
+</html>

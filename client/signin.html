@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/landingPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        /* Style for labelForm class */
+.labelForm {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.signup-form{
+    margin-top: 27px;
+}
+
+/* Style for input fields */
+#text1, input[type="email"], input[type="tel"], input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* add some color to the input box border */
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="password"]:focus {
+  border-color: #0078AD;
+}
+
+/* Style for phone number input field */
+#mobile {
+  position: relative;
+}
+
+#mobile:before {
+  content: "+91 ";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #333;
+  font-weight: bold;
+}
+
+/* Style for error messages */
+.error {
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+#signedIn_Name{
+    display: none;
+}
+#logOutBtn{
+    display: none;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="headWrapper">
+            <div id="leftcontent">
+                <div id="hamButton">
+                    <a href="#">
+                        <img src="graphics\hamburger-icon.svg" alt="">
+                    </a>
+                </div>
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="graphics\logo.png" alt="">
+                    </a>
+                </div>
+                <div id="location">
+                    <a href="#"><span><img src="graphics\location-icon.svg" alt=""></span> Deliver to <span
+                            style="font-weight: bolder;">Ranchi , 834001</span></a>
+                </div>
+            </div>
+            <h3 id="signedIn_Name"></h3>
+            <div id="rightContent">
+                <div class="search-container">
+                    <input type="text" placeholder="Search Your Item" class="search-box" />
+                    <span id="searchBtn" class="material-symbols-outlined">search</span>
+                </div>
+                <div id="cartLogo">
+                    <a href="cart.html"><img src="graphics\cart-icon.svg" alt="" /></a>
+                </div>
+                <div id="signinWrapper">
+                    <a href="signup.html" id="signUpBtn"><span><img src="graphics\user-icon.svg" alt=""></span></a>
+                    <a id="logOutBtn" href=""><span class="material-symbols-outlined">logout</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <nav class="nav-area">
+        <ul>
+            <li>
+                <a href="#">Groceries
+                </a>
+                <ul>
+                    <li><a href="">Fruits & Vegetables</a></li>
+                    <li><a href="">Dairy & Bakery</a> </li>
+                    <li><a href="">Staples</a></li>
+                    <li><a href="">Snacks & Branded Foods</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Premium Fruits</a>
+                <ul>
+                    <li><a href="">Apple & Pears </a></li>
+                    <li><a href="">Avocado,Peach,Plum</a></li>
+                    <li><a href="">Banana ,Melons & Coconut </a></li>
+                    <li><a href="">Dates</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Home & Kitchen</a>
+                <ul>
+                    <li>
+                        <a href="#">Bathroom & Laundry Accessories</a>
+                    </li>
+                    <li>
+                        <a href="#">Disposal</a>
+                    </li>
+                    <li>
+                        <a href="#">Furnishing</a>
+                    </li>
+                    <li>
+                        <a href="#">Gardern & Outdoor</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Home Decor</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Fashion</a>
+                <ul>
+                    <li><a href="">Men</a></li>
+                    <li><a href="">Women</a></li>
+                    <li><a href="">Boys</a></li>
+                    <li><a href="">Girls</a></li>
+                    <li><a href="">Infants</a></li>
+                </ul>
+            </li>
+
+            </li>
+            <li>
+                <a href="#">Electronics</a>
+                <ul>
+                    <li><a href="">Mobiles & Tablets</a></li>
+                    <li><a href="">TV & Speaker</a></li>
+                    <li><a href="">Home Appliances</a></li>
+                    <li><a href="">Computer</a></li>
+                    <li><a href="">Camera</a></li>
+                    <li><a href="">Kitchen Appliances</a></li>
+                    <li><a href="">Gaming Accessories</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Beauty</a>
+                <ul>
+                    <li><a href="">Make - Up</a></li>
+                    <li><a href="">Hair</a></li>
+                    <li><a href="">Skin-Care</a></li>
+                    <li><a href="">Fitness</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Sports, Toys & Luggage
+                </a>
+                <ul>
+                    <li><a href="">Toys & Games</a></li>
+                    <li><a href="">Bags & Travel Luggage</a></li>
+                    <li><a href="">Sporting Goods & Fitness Equipment</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Jewellery</a>
+                <ul>
+                    <li><a href="">Fine Jewellery</a></li>
+                    <li><a href="">Gold Plated Jewellery</a></li>
+                    <li><a href="">Silver Plated Jewellery</a></li>
+                    <li><a href=""> Jewellery</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">Home Improvement</a>
+                <ul>
+                    <li><a href="">Auto Care</a></li>
+                    <li><a href="">Building Supplies & Measuring Tools</a></li>
+                    <li><a href="">Carpentry</a></li>
+                    <li><a href="">Electrical</a></li>
+                    <li><a href="">Home Safety & Automatic</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="signUpPage">
+        <div>
+            <img src="graphics\signupBanner.png" alt="">
+        </div>
+        <div>
+            <div style="height: 342px; margin-top: 62px;">
+                <h1>Sign in to BuddyCart</h1>
+                <p>to access your Addresses, Orders & Wishlist.</p>
+                <form id="signin-form" method="post">
+                    <label class="labelForm" for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="email-error" class="error"></span>
+
+                    <label class="labelForm" for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <span id="password-error" class="error"></span>
+
+                    <button id="signinbutton" type="submit" style="display: block; margin-top: 2px;background-color: #0078AD; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Sign In</button>
+                    <a id="alreadySignin" href="signup.html">Not Registered?</a>
+                </form>
+             </div>
+        </div>
+    </div>
+</body>
+<script src="login.js"></script>
+<script src="forAll.js"></script>
+</html>

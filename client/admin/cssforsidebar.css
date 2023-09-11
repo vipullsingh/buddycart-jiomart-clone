@@ -1,0 +1,43 @@
+body {
+    margin: 0px;
+    padding: 0px;
+   /* background-image: url("https://www.shutterstock.com/image-vector/hud-interface-virtual-hologram-future-600w-764856502.jpg");
+   background-repeat: no-repeat;
+   background-size: 300vh; */
+}
+
+.conatinerdiv {
+    display: flex;
+   
+}
+
+.leftsection {
+    width: 20%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    position: fixed;
+     top: 0px;
+}
+
+.leftsection button:hover {
+    background-color: #0078AD;
+}
+
+.leftsection button {
+    padding: 10px 0px 10px 0px;
+    cursor: pointer;
+}
+
+#bgcolor {
+  
+    width: 100%;
+}
+
+.rightsection {
+    width: 78%;
+    text-align: start;
+  margin: 0px 20px 0px 20px ;
+  margin-left: 336px;
+  
+}
